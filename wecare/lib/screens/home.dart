@@ -10,13 +10,13 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var appBar = AppBar(
       centerTitle: true,
-      title: Text("WE CARE",
+      title: const Text("WE CARE",
           style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 6)),
     );
 
     return Scaffold(
       appBar: appBar,
-      body: Stack(
+      body: const Stack(
         children: [
           Map(),
           Center(
