@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:wecare/widgets/homeScreenOptions.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,20 +15,55 @@ class HomePage extends StatelessWidget {
           style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 6)),
     );
 
+    double distance = 50;
     return Scaffold(
       appBar: appBar,
-      body: const Stack(
+      body: Stack(
         children: [
           Map(),
           Center(
-            child: Text(
-              'Welcome to WE CARE',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+            child: Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 100.0),
+                  child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.,
+                    children: [
+                      Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                      HomeScreenOptions(
+                        callback: () {},
+                        image: 'assets/images/doc.png',
+                        text: "Consultation",
+                      ),
+                      SizedBox(width: distance), // Space between buttons
+                      HomeScreenOptions(
+                        callback: () {},
+                        image: 'assets/images/blood.png',
+                        text: "Blood Bank",
+                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: distance,),
+                                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      HomeScreenOptions(
+                        callback: () {},
+                        image: 'assets/images/route.png',
+                        text: "Route Map",
+                      ),
+                      SizedBox(width: distance), // Space between buttons
+                      HomeScreenOptions(
+                        callback: () {},
+                        image: 'assets/images/profile.png',
+                        text: "My Profile",
+                      ),
+                    ],
+                  ),
+                    ],
+                  ),
+                )),
           ),
         ],
       ),
