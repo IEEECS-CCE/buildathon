@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:wecare/screens/home.dart';
 import 'package:wecare/screens/login.dart';
-import 'package:wecare/screens/signin.dart';
+import 'package:wecare/screens/signup.dart';
 import 'package:wecare/screens/splash.dart';
 
 void main() async{
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(name: '/', page: () => SplashScreen()),
         GetPage(name: '/home', page: () => HomePage()),
-        GetPage(name: '/sign-in', page: () => SignInPage()),
+        GetPage(name: '/sign-in', page: () => SignUpPage()),
         GetPage(name: '/log-in', page: () => LoginPage()),
       ],
     );
