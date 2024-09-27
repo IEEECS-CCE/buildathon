@@ -16,7 +16,6 @@ Tell us about your project here
 Explaining the working of project  
 
 ## Technologies used
-List out tech stacks you have used
-
+Flutter,Firebase,Figma
 ## Other Links
 Provide any other links ( for eg. Wireframe , UI, Abstract, Presentation )
