@@ -1,4 +1,4 @@
-![Alt Text](.WeCareLogo.jpg)
+![Alt Text](.WeCareLogo.jpg)  
 Tell us about your project here
 
 ## Team Members
