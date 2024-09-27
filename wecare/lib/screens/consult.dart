@@ -106,7 +106,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           },
                           decoration: const InputDecoration.collapsed(
                               hintText: "How can I help you..",
-                              hintStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
+                              hintStyle: TextStyle(color: Color.fromARGB(255, 74, 73, 73))),
                         ),
                       ),
                       IconButton(

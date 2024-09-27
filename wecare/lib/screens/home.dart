@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wecare/navigator/chat.dart';
+import 'package:wecare/screens/blood-bank.dart';
 import 'package:wecare/widgets/homeScreenOptions.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,53 +28,45 @@ class HomePage extends StatelessWidget {
       body: Stack(
         children: [
           Map(),
+
           Center(
-            child: Container(
-                child: Padding(
-              padding: const EdgeInsets.only(top: 100.0),
+            child: Padding(
+              padding: const EdgeInsets.only(top:13.0),
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      HomeScreenOptions(
-                        callback: () {
-                          Get.off(() => ChatBot());
-                        },
-                        image: 'assets/images/doc.png',
-                        text: "Consultation",
-                      ),
-                      SizedBox(width: distance), // Space between buttons
-                      HomeScreenOptions(
-                        callback: () {},
-                        image: 'assets/images/blood.png',
-                        text: "Blood Bank",
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: distance,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      HomeScreenOptions(
-                        callback: () {},
-                        image: 'assets/images/route.png',
-                        text: "Route Map",
-                      ),
-                      SizedBox(width: distance), // Space between buttons
-                      HomeScreenOptions(
-                        callback: () {},
-                        image: 'assets/images/profile.png',
-                        text: "My Profile",
-                      ),
-                    ],
-                  ),
-                ],
+                          // mainAxisAlignment: MainAxisAlignment.,
+                          children: [
+                            HomeScreenOptions(
+                              callback: () {
+                                Get.off(() => ChatBot());
+                              },
+                              image: 'assets/images/doc.png',
+                              text: "Consultation",
+                            ),
+                            SizedBox(height: distance), // Space between buttons
+                            HomeScreenOptions(
+                              callback: () {
+                                Get.to(() => BloodBank());
+                              },
+                              image: 'assets/images/blood.png',
+                              text: "Blood Bank",
+                            ),
+                            SizedBox(
+                              height: distance,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                HomeScreenOptions(
+                                  callback: () {},
+                                  image: 'assets/images/route.png',
+                                  text: "Route Map",
+                                ),
+                               
+                              ],
+                            ),
+                          ],
               ),
-            )),
+            ),
           ),
         ],
       ),

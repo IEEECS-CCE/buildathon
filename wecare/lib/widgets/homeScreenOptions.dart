@@ -17,22 +17,22 @@ class HomeScreenOptions extends StatelessWidget {
       onTap: callback,
       child: Container(
           decoration: BoxDecoration(
-            color: const Color.fromARGB(196, 251, 251, 251),
+            color: const Color.fromARGB(213, 251, 251, 251),
             borderRadius:
                 BorderRadius.circular(20), // Make the corner more rounded
           ),
           child:  Padding(
-            padding: const EdgeInsets.all(5.0),
+            padding: const EdgeInsets.all(2.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Image.asset(image),
-                Text(text)
+                Image.asset(image, height: 130, width: 130, fit: BoxFit.cover),
+                Text(text, style: const TextStyle(fontSize: 30))
               ],
             ),
           ),
-          height: 140,
-          width: 140),
+          // height: 180,
+          width: 300),
     );
   }
 }
