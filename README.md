@@ -1,5 +1,4 @@
-![image]([WeCareLogo(1).jpg](https://github.com/aravindr001/buildathon/blob/1083e0cd8ab996a8cb56ea26a3a03a3d11ff2a0e/WeCareLogo%20(1).jpg))
-# WeCare
+![Alt Text](.WeCareLogo.jpg)
 Tell us about your project here
 
 ## Team Members
