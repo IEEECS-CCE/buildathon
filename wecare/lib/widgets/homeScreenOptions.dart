@@ -17,7 +17,7 @@ class HomeScreenOptions extends StatelessWidget {
       onTap: callback,
       child: Container(
           decoration: BoxDecoration(
-            color: Colors.white,
+            color: const Color.fromARGB(196, 251, 251, 251),
             borderRadius:
                 BorderRadius.circular(20), // Make the corner more rounded
           ),
@@ -27,7 +27,7 @@ class HomeScreenOptions extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(image),
-                Text(text)
+                Text(text, style: TextStyle(fontWeight: FontWeight.bold))
               ],
             ),
           ),

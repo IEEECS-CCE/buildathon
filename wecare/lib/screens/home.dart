@@ -24,13 +24,13 @@ class HomePage extends StatelessWidget {
           Center(
             child: Container(
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 100.0),
-                  child: Column(
-                    // mainAxisAlignment: MainAxisAlignment.,
+              padding: const EdgeInsets.only(top: 100.0),
+              child: Column(
+                // mainAxisAlignment: MainAxisAlignment.,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    children: [
                       HomeScreenOptions(
                         callback: () {},
                         image: 'assets/images/doc.png',
@@ -42,10 +42,12 @@ class HomePage extends StatelessWidget {
                         image: 'assets/images/blood.png',
                         text: "Blood Bank",
                       ),
-                                    ],
-                                  ),
-                                  SizedBox(height: distance,),
-                                  Row(
+                    ],
+                  ),
+                  SizedBox(
+                    height: distance,
+                  ),
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       HomeScreenOptions(
@@ -61,12 +63,14 @@ class HomePage extends StatelessWidget {
                       ),
                     ],
                   ),
-                    ],
-                  ),
-                )),
+                ],
+              ),
+            )),
           ),
         ],
       ),
+
+      // bottomNavigationBar: BottomNavigationBar(items: items),
     );
   }
 }
