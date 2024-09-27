@@ -4,8 +4,8 @@
 Tell us about your project here
 
 ## Team Members
-[Arunraj V](enter_github_id_here)   
-[2.Team Member 2](enter_github_id_here)   
+[Arunraj V]([enter_github_id_here](https://github.com/Arunrxj-v))   
+[Aravind R]([enter_github_id_here](https://github.com/aravindr001))   
 [3.Team Member 3](enter_github_id_here)   
 [4.Team Member 4](enter_github_id_here)   
 
