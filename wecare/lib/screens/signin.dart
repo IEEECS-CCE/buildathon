@@ -92,6 +92,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wecare/widgets/bloodgroup_dropdown.dart';
 import 'package:wecare/widgets/custom_button.dart';
 import 'package:wecare/widgets/custom_text_field.dart';
 import 'home.dart';
@@ -102,7 +103,8 @@ class SignInPage extends StatelessWidget {
   final TextEditingController passwordController = TextEditingController();
   final TextEditingController ageController = TextEditingController();
   final TextEditingController genderController = TextEditingController();
-  final TextEditingController bloodGroupController = TextEditingController();
+  // final TextEditingController bloodGroupController = TextEditingController();
+  String? selectedBloodGroup; 
   final TextEditingController weightController = TextEditingController();
   final TextEditingController heightController = TextEditingController();
 
@@ -110,7 +112,7 @@ class SignInPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-    centerTitle: true,
+        centerTitle: true,
         title: const Text(
           'SIGN UP',
           style: TextStyle(letterSpacing: 12, fontWeight: FontWeight.bold),
@@ -147,10 +149,11 @@ class SignInPage extends StatelessWidget {
                 obscureText: true,
               ),
               const SizedBox(height: 16.0),
-              CustomTextField(
-                controller: bloodGroupController,
-                labelText: 'Blood Group',
-                prefixIcon: Icons.bloodtype,
+              BloodGroupDropdown(
+                selectedBloodGroup: selectedBloodGroup,
+                onChanged: (value) {
+                  selectedBloodGroup = value;
+                },
               ),
               const SizedBox(height: 16.0),
               Row(
@@ -195,12 +198,14 @@ class SignInPage extends StatelessWidget {
               CustomButton(
                 text: 'Sign Up',
                 onPressed: () {
-                  if (_validateInputs()) {
-                    Get.off(() => HomePage());
-                  } else {
-                    Get.snackbar('Error', 'Please enter valid credentials',
-                        snackPosition: SnackPosition.BOTTOM);
-                  }
+                  // if (_validateInputs()) {
+                  //   Get.off(() => HomePage());
+                  // } else {
+                  //   Get.snackbar('Error', 'Please enter valid credentials',
+                  //       snackPosition: SnackPosition.BOTTOM);
+                  // }
+
+                  Get.off(() => HomePage());
                 },
               ),
               const SizedBox(height: 10.0),
@@ -221,7 +226,7 @@ class SignInPage extends StatelessWidget {
     String name = nameController.text.trim();
     String email = emailController.text.trim();
     String password = passwordController.text.trim();
-    String bloodGroup = bloodGroupController.text.trim();
+    String bloodGroup = selectedBloodGroup ?? '';
     String age = ageController.text.trim();
     String gender = genderController.text.trim();
     String weight = weightController.text.trim();
