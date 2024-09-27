@@ -19,3 +19,4 @@ Explaining the working of project
 Flutter,Firebase,Figma
 ## Other Links
 Provide any other links ( for eg. Wireframe , UI, Abstract, Presentation )
+Figma UI -(https://www.figma.com/design/BQPh05ICmTgprFkVxm6FyB/Untitled?node-id=0-1&t=Vfi2rlKfzmbQPUfL-1)
