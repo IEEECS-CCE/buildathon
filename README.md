@@ -10,7 +10,7 @@ WeCare is a CrossPlatform flutter mobile application that uses artificial intell
 [Embed the live link of project](live_link)
 
 ## How it Works ?
-Explaining the working of project  
+WeCare's user interface is completely built using flutter and is backed by firebase. THe Ai medical consultation is implemented by building a chatbot which is connected to GPT 3.5 Turbo model using Openai API. The Digital bloodbank works by searching the database for matching bloodgroups and pinging them with requirement notifications. The Disease map is implemented using an opensource flutter maps API and using this API the emergency location identifier is implemented.
 
 ## Technologies used
 Flutter,Firebase,Figma
