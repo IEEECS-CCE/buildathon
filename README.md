@@ -16,4 +16,4 @@ WeCare's user interface is completely built using flutter and is backed by fireb
 Flutter,Firebase,Figma
 ## Other Links
 Figma UI -(https://www.figma.com/design/BQPh05ICmTgprFkVxm6FyB/Untitled?node-id=0-1&t=Vfi2rlKfzmbQPUfL-1)  
-Presentation - (https://www.canva.com/design/DAGR7HB0jF4/MBrf5Zzb-A59vnRTEQTeDQ/view?utm_content=DAGR7HB0jF4&utm_campaign=designshare&utm_medium=link&utm_source=editor)  
+Presentation - (https://www.canva.com/design/DAGR8JDSJ5E/2aoQ-mmAyct5zm05AcdXZw/view?utm_content=DAGR8JDSJ5E&utm_campaign=designshare&utm_medium=link&utm_source=editor)  
