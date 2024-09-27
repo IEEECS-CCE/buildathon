@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:wecare/services/firebase_services.dart';
+import 'package:wecare/widgets/bloodgroup_dropdown.dart';
 
 class RequestBlood extends StatelessWidget {
   RequestBlood({super.key});
@@ -10,7 +11,7 @@ class RequestBlood extends StatelessWidget {
   final TextEditingController phoneController = TextEditingController();
   final TextEditingController addressController = TextEditingController();
   final TextEditingController hospitalController = TextEditingController();
-
+  String? selectedBloodGroup; 
   final FirebaseFirestore _firestore = FirestoreService.instance;
 
   final CollectionReference users = FirestoreService.instance.collection('users');
@@ -45,6 +46,11 @@ class RequestBlood extends StatelessWidget {
             const SnackBar(content: Text('Hospital is required')));
         return false;
       }
+      if (selectedBloodGroup!.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Phone number is required')));
+        return false;
+      }
       return true;
     }
 
@@ -64,6 +70,15 @@ class RequestBlood extends StatelessWidget {
                   height: 30,
                 ),
                 CustomTextFeild(placeHolder: 'Age', controller: ageController),
+                const SizedBox(
+                  height: 30,
+                ),
+                BloodGroupDropdown(
+                  selectedBloodGroup: selectedBloodGroup,
+                  onChanged: (value) {
+                    selectedBloodGroup = value;
+                  },
+                ),
                 const SizedBox(
                   height: 30,
                 ),
@@ -92,6 +107,7 @@ class RequestBlood extends StatelessWidget {
                             'phone': phoneController.text,
                             'address': addressController.text,
                             'hospital': hospitalController.text,
+                            'blood group': selectedBloodGroup
                           })
                           .then((value) => {
                                 ScaffoldMessenger.of(context).showSnackBar(
@@ -104,6 +120,7 @@ class RequestBlood extends StatelessWidget {
                                 phoneController.clear(),
                                 addressController.clear(),
                                 hospitalController.clear(),
+                                selectedBloodGroup = ''
                               })
                           .catchError((error) => {
                                 ScaffoldMessenger.of(context).showSnackBar(
