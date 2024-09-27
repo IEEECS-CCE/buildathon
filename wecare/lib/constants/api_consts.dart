@@ -1,4 +1,3 @@
-String BASE_URL = "https://api.openai.com/v1";
-String API_KEY = "";
+String API_KEY = "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";
 
 

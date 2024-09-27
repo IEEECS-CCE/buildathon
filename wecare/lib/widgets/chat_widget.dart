@@ -27,8 +27,8 @@ class ChatWidget extends StatelessWidget {
               children: [
                 Image.asset(
                   chatIndex == 0
-                      ? AssetsManager.userImage
-                      : AssetsManager.notifyLogo,
+                      ? AssetsManager.profile
+                      : AssetsManager.docImage,
                   height: 30,
                   width: 30,
                 ),

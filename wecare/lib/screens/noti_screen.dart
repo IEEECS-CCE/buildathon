@@ -48,7 +48,7 @@ class _ChatScreenState extends State<ChatScreen> {
         backgroundColor: const Color.fromARGB(215, 239, 239, 239),
         elevation: 1,
         centerTitle: true,
-        title: const Text("NOTI GEN AI",
+        title: const Text("",
         style: TextStyle(
           color: Colors.black,
           letterSpacing: 6
@@ -87,7 +87,7 @@ class _ChatScreenState extends State<ChatScreen> {
               padding: const EdgeInsets.all(10),
               child: Material(
                 borderRadius: const BorderRadiusDirectional.all(Radius.circular(10)),
-                color: const Color.fromARGB(255, 129, 129, 129),
+                color: const Color.fromARGB(255, 50, 222, 93),
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -97,7 +97,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           cursorHeight: 15,
                           cursorColor: Colors.amber,
                           focusNode: focusNode,
-                          style: const TextStyle(color: Color.fromARGB(255, 255, 255, 255),),
+                          style: const TextStyle(color: Color.fromARGB(255, 0, 0, 0),),
                           controller: textEditingController,
                           onSubmitted: (value) async {
                             await sendMessageFCT(
@@ -106,7 +106,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           },
                           decoration: const InputDecoration.collapsed(
                               hintText: "How can I help you..",
-                              hintStyle: TextStyle(color: Color.fromARGB(255, 246, 246, 246))),
+                              hintStyle: TextStyle(color: Color.fromARGB(255, 0, 0, 0))),
                         ),
                       ),
                       IconButton(
@@ -118,7 +118,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           icon: const Icon(
                             size: 26 ,
                             Icons.send,
-                            color: Color.fromARGB(255, 255, 254, 254),
+                            color: Color.fromARGB(255, 0, 0, 0),
                           ))
                     ],
                   ),
