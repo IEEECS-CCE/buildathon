@@ -5,6 +5,7 @@ import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:wecare/navigator/chat.dart';
 import 'package:wecare/screens/blood-bank.dart';
+import 'package:wecare/screens/route.dart';
 import 'package:wecare/widgets/homeScreenOptions.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,7 +28,7 @@ class HomePage extends StatelessWidget {
       appBar: appBar,
       body: Stack(
         children: [
-          Map(),
+          MapScreen(),
 
           Center(
             child: Padding(
@@ -57,7 +58,9 @@ class HomePage extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 HomeScreenOptions(
-                                  callback: () {},
+                                  callback: () {
+                                    Get.to(()=> RouteScreen());
+                                  },
                                   image: 'assets/images/route.png',
                                   text: "Route Map",
                                 ),
@@ -76,14 +79,14 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class Map extends StatefulWidget {
-  const Map({super.key});
+class MapScreen extends StatefulWidget {
+  const MapScreen({super.key});
 
   @override
-  State<Map> createState() => _MapState();
+  State<MapScreen> createState() => _MapScreenState();
 }
 
-class _MapState extends State<Map> {
+class _MapScreenState extends State<MapScreen> {
   @override
   Widget build(BuildContext context) {
     return FlutterMap(
