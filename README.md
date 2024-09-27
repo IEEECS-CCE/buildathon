@@ -1,6 +1,5 @@
-![Alt Text](WeCareLogo.jpg)  
-Tell us about your project here
-
+![Alt Text](WeCareLogo.jpg)    
+WeCare is a CrossPlatform flutter mobile application that uses artificial intelligence to help users seek medical help with in the reach of hands. It houses a digital bloodbank which manages the requiremnent and availability of blood. WeCare constantly fetches the users location that enables the possiblility of location idenfication during crisis situations like diesease outbreak and natural calamities, it helps the rescue departments to supply the needed medical and food supplies during crisis.
 ## Team Members
 [Arunraj V](https://github.com/Arunrxj-v)
 [Aravind R](https://github.com/aravindr001)
