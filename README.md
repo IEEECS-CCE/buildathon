@@ -1,13 +1,13 @@
 ![image](IMG-20240925-WA0030.jpg)
 
-# {Project Name} - BUILDATHON
+# WeCare
 Tell us about your project here
 
 ## Team Members
-[1.Team Member 1](enter_github_id_here)   
-[2.Team Member 2](enter_github_id_here)   
-[3.Team Member 3](enter_github_id_here)   
-[4.Team Member 4](enter_github_id_here)   
+[Arunraj V](https://github.com/Arunrxj-v)
+[Aravind R](https://github.com/aravindr001)
+[Joel Koshy John](https://github.com/Joelkoshyjohn)
+
 
 ## Link to Project
 [Embed the live link of project](live_link)
@@ -16,7 +16,7 @@ Tell us about your project here
 Explaining the working of project  
 
 ## Technologies used
-List out tech stacks you have used
-
+Flutter,Firebase,Figma
 ## Other Links
-Provide any other links ( for eg. Wireframe , UI, Abstract, Presentation )
+Figma UI -(https://www.figma.com/design/BQPh05ICmTgprFkVxm6FyB/Untitled?node-id=0-1&t=Vfi2rlKfzmbQPUfL-1)  
+Presentation - (https://www.canva.com/design/DAGR7HB0jF4/MBrf5Zzb-A59vnRTEQTeDQ/view?utm_content=DAGR7HB0jF4&utm_campaign=designshare&utm_medium=link&utm_source=editor)  
