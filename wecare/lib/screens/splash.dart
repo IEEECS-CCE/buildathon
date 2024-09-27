@@ -36,8 +36,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           duration: const Duration(seconds: 3), 
           child: Image.asset(
             'assets/images/logo.png', 
-            width: 200,
-            height: 200,
+            width: 400,
+            height: 400,
           ),
         ),
       ),

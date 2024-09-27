@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:get/route_manager.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:wecare/screens/chat.dart';
 import 'package:wecare/widgets/homeScreenOptions.dart';
 
 class HomePage extends StatelessWidget {
@@ -11,6 +13,10 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     var appBar = AppBar(
       centerTitle: true,
+      leading: Padding(
+        padding: const EdgeInsets.only(left:8.0),
+        child: Image.asset('assets/images/logo2.png'),
+      ),
       title: const Text("WE CARE",
           style: TextStyle(fontWeight: FontWeight.bold, letterSpacing: 6)),
     );
@@ -32,7 +38,10 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       HomeScreenOptions(
-                        callback: () {},
+                        callback: () {
+
+                          Get.off(()=> ChatBotHomePage());
+                        },
                         image: 'assets/images/doc.png',
                         text: "Consultation",
                       ),
@@ -88,8 +97,8 @@ class _MapState extends State<Map> {
     return FlutterMap(
       options: MapOptions(
         initialCenter:
-            LatLng(51.509364, -0.128928), // Center the map over London
-        initialZoom: 9.2,
+            LatLng(10.3353, 76.2158), // Center the map over London
+        initialZoom: 12,
       ),
       children: [
         TileLayer(

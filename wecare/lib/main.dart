@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
         GetPage(name: '/home', page: () => HomePage()),
         GetPage(name: '/sign-in', page: () => SignInPage()),
         GetPage(name: '/log-in', page: () => LoginPage()),
+    
       ],
     );
   }
