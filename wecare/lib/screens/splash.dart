@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wecare/screens/signin.dart';
+import 'package:wecare/screens/signup.dart';
 
 class SplashScreen extends StatefulWidget {
   @override
@@ -23,7 +23,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
 
     Future.delayed(const Duration(seconds: 3), () {
-      Get.off(()=> SignInPage());
+      Get.off(()=> SignUpPage());
     });
   }
 

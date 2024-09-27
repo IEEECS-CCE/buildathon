@@ -21,13 +21,13 @@ class HomeScreenOptions extends StatelessWidget {
             borderRadius:
                 BorderRadius.circular(20), // Make the corner more rounded
           ),
-          child: Padding(
+          child:  Padding(
             padding: const EdgeInsets.all(5.0),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Image.asset(image),
-                Text(text, style: TextStyle(fontWeight: FontWeight.bold))
+                Text(text)
               ],
             ),
           ),
