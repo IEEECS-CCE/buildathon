@@ -6,7 +6,6 @@ import 'package:wecare/screens/signin.dart';
 import 'package:wecare/screens/splash.dart';
 
 void main() {
-  
   runApp( MyApp());
 }
 
