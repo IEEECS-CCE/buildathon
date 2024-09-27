@@ -1,4 +1,4 @@
-![image](WeCareLogo(1).png)
+![image](WeCareLogo.jpg)
 
 # WeCare
 Tell us about your project here
