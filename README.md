@@ -4,10 +4,10 @@
 Tell us about your project here
 
 ## Team Members
-[Arunraj V]((https://github.com/Arunrxj-v))
-[Aravind R]([enter_github_id_here](https://github.com/aravindr001))   
-[3.Team Member 3](enter_github_id_here)   
-[4.Team Member 4](enter_github_id_here)   
+[Arunraj V](https://github.com/Arunrxj-v)
+[Aravind R](https://github.com/aravindr001)
+[Joel Koshy John](https://github.com/Joelkoshyjohn)
+
 
 ## Link to Project
 [Embed the live link of project](live_link)
