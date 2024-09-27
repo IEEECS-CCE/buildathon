@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:wecare/providers/chats_provider.dart';
 import 'package:wecare/providers/models_provider.dart';
-import 'package:wecare/screens/noti_screen.dart';
+import 'package:wecare/screens/consult.dart';
 
 class ChatBot extends StatelessWidget {
   const ChatBot({super.key});
