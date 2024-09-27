@@ -1,22 +1,19 @@
-![image](IMG-20240925-WA0030.jpg)
-
-# {Project Name} - BUILDATHON
-Tell us about your project here
-
+![Alt Text](WeCareLogo.jpg)    
+WeCare is a CrossPlatform flutter mobile application that uses artificial intelligence to help users seek medical help with in the reach of hands. It houses a digital bloodbank which manages the requiremnent and availability of blood. WeCare constantly fetches the users location that enables the possiblility of location idenfication during crisis situations like diesease outbreak and natural calamities, it helps the rescue departments to supply the needed medical and food supplies during crisis.
 ## Team Members
-[1.Team Member 1](enter_github_id_here)   
-[2.Team Member 2](enter_github_id_here)   
-[3.Team Member 3](enter_github_id_here)   
-[4.Team Member 4](enter_github_id_here)   
+[Arunraj V](https://github.com/Arunrxj-v)
+[Aravind R](https://github.com/aravindr001)
+[Joel Koshy John](https://github.com/Joelkoshyjohn)
+
 
 ## Link to Project
 [Embed the live link of project](live_link)
 
 ## How it Works ?
-Explaining the working of project  
+WeCare's user interface is completely built using flutter and is backed by firebase. THe Ai medical consultation is implemented by building a chatbot which is connected to GPT 3.5 Turbo model using Openai API. The Digital bloodbank works by searching the database for matching bloodgroups and pinging them with requirement notifications. The Disease map is implemented using an opensource flutter maps API and using this API the emergency location identifier is implemented.
 
 ## Technologies used
-List out tech stacks you have used
-
+Flutter,Firebase,Figma
 ## Other Links
-Provide any other links ( for eg. Wireframe , UI, Abstract, Presentation )
+Figma UI -(https://www.figma.com/design/BQPh05ICmTgprFkVxm6FyB/Untitled?node-id=0-1&t=Vfi2rlKfzmbQPUfL-1)  
+Presentation - (https://www.canva.com/design/DAGR8JDSJ5E/2aoQ-mmAyct5zm05AcdXZw/view?utm_content=DAGR8JDSJ5E&utm_campaign=designshare&utm_medium=link&utm_source=editor)  
