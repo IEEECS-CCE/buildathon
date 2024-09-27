@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:wecare/services/firebase_services.dart';
 
 class RequestBlood extends StatelessWidget {
   RequestBlood({super.key});
@@ -9,32 +11,109 @@ class RequestBlood extends StatelessWidget {
   final TextEditingController addressController = TextEditingController();
   final TextEditingController hospitalController = TextEditingController();
 
+  final FirebaseFirestore _firestore = FirestoreService.instance;
+
+  final CollectionReference users = FirestoreService.instance.collection('users');
+
+  
   @override
   Widget build(BuildContext context) {
+
+    bool validateData() {
+      if (nameController.text.isEmpty) {
+        ScaffoldMessenger.of(context)
+            .showSnackBar(const SnackBar(content: Text('Name is required')));
+        return false;
+      }
+      if (ageController.text.isEmpty) {
+        ScaffoldMessenger.of(context)
+            .showSnackBar(const SnackBar(content: Text('Age is required')));
+        return false;
+      }
+      if (phoneController.text.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Phone number is required')));
+        return false;
+      }
+      if (addressController.text.isEmpty) {
+        ScaffoldMessenger.of(context)
+            .showSnackBar(const SnackBar(content: Text('Address is required')));
+        return false;
+      }
+      if (hospitalController.text.isEmpty) {
+        ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(content: Text('Hospital is required')));
+        return false;
+      }
+      return true;
+    }
+
     return Scaffold(
-      appBar: AppBar(title: const Text("Enter the donor's details"),),
+      appBar: AppBar(
+        title: const Text("Enter the donor's details"),
+      ),
       body: Center(
         child: SingleChildScrollView(
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
               children: [
-                CustomTextFeild(placeHolder: 'Name', controller: nameController),
-                const SizedBox(height: 30,), 
+                CustomTextFeild(
+                    placeHolder: 'Name', controller: nameController),
+                const SizedBox(
+                  height: 30,
+                ),
                 CustomTextFeild(placeHolder: 'Age', controller: ageController),
-                const SizedBox(height: 30,), 
-                CustomTextFeild(placeHolder: 'Phone Number', controller: phoneController),
-                const SizedBox(height: 30,), 
-                CustomTextFeild(placeHolder: 'Address', controller: addressController),
-                const SizedBox(height: 30,), 
-                CustomTextFeild(placeHolder: 'Hospital', controller: hospitalController),
-                const SizedBox(height: 30,), 
-              ElevatedButton(
-                onPressed: () {
-                  // Handle submit button press
-                },
-                child: const Text('Submit'),
-              ),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomTextFeild(
+                    placeHolder: 'Phone Number', controller: phoneController),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomTextFeild(
+                    placeHolder: 'Address', controller: addressController),
+                const SizedBox(
+                  height: 30,
+                ),
+                CustomTextFeild(
+                    placeHolder: 'Hospital', controller: hospitalController),
+                const SizedBox(
+                  height: 30,
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    if (validateData()) {
+                      users
+                          .add({
+                            'name': nameController.text,
+                            'age': ageController.text,
+                            'phone': phoneController.text,
+                            'address': addressController.text,
+                            'hospital': hospitalController.text,
+                          })
+                          .then((value) => {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  const SnackBar(
+                                      content:
+                                          Text('Data submitted successfully')),
+                                ),
+                                nameController.clear(),
+                                ageController.clear(),
+                                phoneController.clear(),
+                                addressController.clear(),
+                                hospitalController.clear(),
+                              })
+                          .catchError((error) => {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(content: Text('Error: $error')),
+                                ),
+                              });
+                    }
+                  },
+                  child: const Text('Submit'),
+                ),
               ],
             ),
           ),
@@ -44,11 +123,10 @@ class RequestBlood extends StatelessWidget {
   }
 }
 
-
 class CustomTextFeild extends StatelessWidget {
   final String placeHolder;
   final TextEditingController controller;
-  CustomTextFeild({ required this.placeHolder, required this.controller});
+  CustomTextFeild({required this.placeHolder, required this.controller});
 
   @override
   Widget build(BuildContext context) {

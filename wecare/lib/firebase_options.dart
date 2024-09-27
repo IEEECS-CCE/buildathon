@@ -60,4 +60,5 @@ class DefaultFirebaseOptions {
     databaseURL: 'https://wecare-c55d5-default-rtdb.firebaseio.com',
     storageBucket: 'wecare-c55d5.appspot.com',
   );
+
 }
