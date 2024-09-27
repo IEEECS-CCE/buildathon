@@ -1,6 +1,6 @@
 ![image](IMG-20240925-WA0030.jpg)
 
-# {WeCare} - BUILDATHON
+# WeCare
 Tell us about your project here
 
 ## Team Members
